@@ -1,0 +1,13 @@
+category_id,category_name,category_type
+1,Theft,Crime
+2,Robbery,Crime
+3,Assault,Crime
+4,Fraud,Crime
+5,Domestic Violence,Crime
+6,Cyber Crime,Crime
+7,Water Supply,Service
+8,Electricity,Service
+9,Road Maintenance,Service
+10,Public Transport,Service
+11,Healthcare,Service
+12,Education,Service
