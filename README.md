@@ -4,17 +4,23 @@ This repository hosts my **State Complaints Dashboard Project**, where I’ll be
 
 ---
 
-## 📌 Current Status: 🚧 Project Kickoff  
-- ✅ Project initialized on GitHub  
-- ✅ Static dataset prepared using AI-based data generation (`build.dataset`)  
-- ✅ Dataset includes details of complaints (2023–2025), customers, states, and categories  
-- 📂 Data available under `/data` folder in `.csv` format  
+## 📌 Current Status: as of 2 Nov 2025  
+- ✅ Static dataset created using Build.Dataset AI, covering 3 years and 36 states/UTs.
 
-**Next steps:**
-- 🔜 Load data into SQL database and perform EDA using SQL  
+- ✅ Performed Initial EDA in Python using Pandas and Matplotlib:
+  - Total complaints per state
+  - Most common complaint categories
+  - Resolution rate by state
+  - Complaint trends over time (year-wise)
+
+- 📊 Visual insights generated in matplotlib and saved for future dashboard use
+
+**Next steps:** 
 - 🔜 Build data model and start designing Power BI dashboard  
 - 🔜 Document SQL queries and dashboard insights  
 - 🔜 Add project roadmap and future scope in this README  
+
+🔗 View EDA Notebook: [`EDA/state-complaint-eda.ipynb`](./EDA/state-complaint-eda.ipynb)
 
 ---
 
