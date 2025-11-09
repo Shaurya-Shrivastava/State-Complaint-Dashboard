@@ -1,24 +1,51 @@
-# 🧠 State Complaints Dashboard (In Progress)
+# 🧠 State Complaints Dashboard | PowerBI
 
-This repository hosts my **State Complaints Dashboard Project**, where I’ll be performing data analysis and building a fully interactive dashboard to understand complaint patterns across all Indian states.
+A dynamic and insightful Power BI dashboard visualizing **complaint patterns across Indian states (2023–2025)**.  
+This project focuses on uncovering trends, resolution performance, and regional complaint distribution.
 
 ---
 
-## 📌 Current Status: as of 2 Nov 2025  
-- ✅ Static dataset created using Build.Dataset AI, covering 3 years and 36 states/UTs.
+## 🚀 Project Overview
 
-- ✅ Performed Initial EDA in Python using Pandas and Matplotlib:
-  - Total complaints per state
-  - Most common complaint categories
-  - Resolution rate by state
-  - Complaint trends over time (year-wise)
+This dashboard provides an analytical view of:
+- Total complaints and resolution rate 📊  
+- Average resolution days ⏱️  
+- State-wise complaint heat map of India 🗺️  
+- Monthly and yearly complaint trends  
+- Filters for year, status, and complaint category  
 
-- 📊 Visual insights generated in matplotlib and saved for future dashboard use
+---
 
-**Next steps:** 
-- 🔜 Build data model and start designing Power BI dashboard  
-- 🔜 Document SQL queries and dashboard insights  
-- 🔜 Add project roadmap and future scope in this README  
+## 🛠️ Tools & Tech Stack
+
+| Tool | Purpose |
+|------|----------|
+| **Power BI** | Dashboard & Visualizations |
+| **Excel / CSV** | Data Source |
+| **Python (EDA)** | Data Cleaning & Transformation |
+| **GitHub** | Version Control |
+
+---
+
+## 📈 Key Insights
+
+- ⚡ **Highest complaint volume:** Uttar Pradesh, Maharashtra, and Bihar  
+- ✅ **Best resolution rate:** Kerala & Himachal Pradesh  
+- ⏳ **Longest resolution time:** Delhi  
+- 📅 **Trends show**: steady rise in domestic violence and cyber fraud cases
+
+---
+
+## 🧮 DAX Measures Used
+
+```DAX
+Total Complaints = COUNTROWS(Complaints)
+Resolved Complaints = CALCULATE(COUNTROWS(Complaints), Complaints[Status] = "Resolved")
+Resolution Rate % = DIVIDE([Resolved Complaints], [Total Complaints])
+Average Resolution Days = AVERAGE(Complaints[Resolution_Days])
+Open Complaints = COUNTROWS(FILTER(Complaints, Complaints[Status] <> "Resolved"))
+
+--- 
 
 🔗 View EDA Notebook: [`EDA/state-complaint-eda.ipynb`](./EDA/state-complaint-eda.ipynb)
 
@@ -34,4 +61,6 @@ state-complaints-dashboard/
 
 ---
 
-Stay tuned for updates — I’ll be pushing daily progress including analysis queries, data modeling steps, and dashboard visuals.
+👩‍💻 Author
+Shaurya Shrivastava
+📊 Data Analytics Enthusiast | Power BI | SQL | Python
